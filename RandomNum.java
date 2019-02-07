@@ -34,53 +34,31 @@ public class RandomNum
     public void main(){
        System.out.println("Enter a number between 1 and 30");
        Scanner input = new Scanner(System.in);
-       int guess = input.nextInt();
+       
        Random rand = new Random();
        int n = rand.nextInt(30) + 1;
        System.out.println(n);
        
        int counter = 0;
        
-      
-         if(guess > n) {
+       while(true) {
+         int guess = input.nextInt();
+       if(guess > n) {
            System.out.println("too large");
            counter++;
-        } else if (guess < n){
+        }  else if (guess < n){
             System.out.println("too small");
             counter++;
-        } else {
-            System.out.println("Correct Guess! You took " + counter + " tries.");
+        }  else {
+            System.out.println("You made the correct guess in " + counter + " tries");
+            
             
             
         } 
-      
-       
-            
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-      
-       
-       
-     
-    
-        // put your code here
-        
-    
+      }
+}
+}
 
-}
-}
+
 
 
